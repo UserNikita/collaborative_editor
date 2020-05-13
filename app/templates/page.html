@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Collaborative editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/lib/codemirror.css">
+
+    <link rel="stylesheet" href="/static/theme/3024-day.css">
+    <link rel="stylesheet" href="/static/theme/3024-night.css">
+    <link rel="stylesheet" href="/static/theme/abcdef.css">
+    <link rel="stylesheet" href="/static/theme/ambiance.css">
+    <link rel="stylesheet" href="/static/theme/ayu-dark.css">
+    <link rel="stylesheet" href="/static/theme/ayu-mirage.css">
+    <link rel="stylesheet" href="/static/theme/base16-dark.css">
+    <link rel="stylesheet" href="/static/theme/bespin.css">
+    <link rel="stylesheet" href="/static/theme/base16-light.css">
+    <link rel="stylesheet" href="/static/theme/blackboard.css">
+    <link rel="stylesheet" href="/static/theme/cobalt.css">
+    <link rel="stylesheet" href="/static/theme/colorforth.css">
+    <link rel="stylesheet" href="/static/theme/dracula.css">
+    <link rel="stylesheet" href="/static/theme/duotone-dark.css">
+    <link rel="stylesheet" href="/static/theme/duotone-light.css">
+    <link rel="stylesheet" href="/static/theme/eclipse.css">
+    <link rel="stylesheet" href="/static/theme/elegant.css">
+    <link rel="stylesheet" href="/static/theme/erlang-dark.css">
+    <link rel="stylesheet" href="/static/theme/gruvbox-dark.css">
+    <link rel="stylesheet" href="/static/theme/hopscotch.css">
+    <link rel="stylesheet" href="/static/theme/icecoder.css">
+    <link rel="stylesheet" href="/static/theme/isotope.css">
+    <link rel="stylesheet" href="/static/theme/lesser-dark.css">
+    <link rel="stylesheet" href="/static/theme/liquibyte.css">
+    <link rel="stylesheet" href="/static/theme/lucario.css">
+    <link rel="stylesheet" href="/static/theme/material.css">
+    <link rel="stylesheet" href="/static/theme/material-darker.css">
+    <link rel="stylesheet" href="/static/theme/material-palenight.css">
+    <link rel="stylesheet" href="/static/theme/material-ocean.css">
+    <link rel="stylesheet" href="/static/theme/mbo.css">
+    <link rel="stylesheet" href="/static/theme/mdn-like.css">
+    <link rel="stylesheet" href="/static/theme/midnight.css">
+    <link rel="stylesheet" href="/static/theme/monokai.css">
+    <link rel="stylesheet" href="/static/theme/moxer.css">
+    <link rel="stylesheet" href="/static/theme/neat.css">
+    <link rel="stylesheet" href="/static/theme/neo.css">
+    <link rel="stylesheet" href="/static/theme/night.css">
+    <link rel="stylesheet" href="/static/theme/nord.css">
+    <link rel="stylesheet" href="/static/theme/oceanic-next.css">
+    <link rel="stylesheet" href="/static/theme/panda-syntax.css">
+    <link rel="stylesheet" href="/static/theme/paraiso-dark.css">
+    <link rel="stylesheet" href="/static/theme/paraiso-light.css">
+    <link rel="stylesheet" href="/static/theme/pastel-on-dark.css">
+    <link rel="stylesheet" href="/static/theme/railscasts.css">
+    <link rel="stylesheet" href="/static/theme/rubyblue.css">
+    <link rel="stylesheet" href="/static/theme/seti.css">
+    <link rel="stylesheet" href="/static/theme/shadowfox.css">
+    <link rel="stylesheet" href="/static/theme/solarized.css">
+    <link rel="stylesheet" href="/static/theme/the-matrix.css">
+    <link rel="stylesheet" href="/static/theme/tomorrow-night-bright.css">
+    <link rel="stylesheet" href="/static/theme/tomorrow-night-eighties.css">
+    <link rel="stylesheet" href="/static/theme/ttcn.css">
+    <link rel="stylesheet" href="/static/theme/twilight.css">
+    <link rel="stylesheet" href="/static/theme/vibrant-ink.css">
+    <link rel="stylesheet" href="/static/theme/xq-dark.css">
+    <link rel="stylesheet" href="/static/theme/xq-light.css">
+    <link rel="stylesheet" href="/static/theme/yeti.css">
+    <link rel="stylesheet" href="/static/theme/idea.css">
+    <link rel="stylesheet" href="/static/theme/darcula.css">
+    <link rel="stylesheet" href="/static/theme/yonce.css">
+    <link rel="stylesheet" href="/static/theme/zenburn.css">
+    <style>
+        .CodeMirror {
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-primary">
+    <a href="/" class="navbar-brand mb-0 h1">Collaborative Editor</a>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card ml-2 mt-2">
+                <div class="card-body p-0">
+                    <textarea id="code" name="code" cols="120" rows="100">{{ page.code }}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-auto">
+            <div class="mt-2 mr-2">
+                <div class="form-group">
+                    <label for="theme">Тема</label>
+                    <select id="theme" class="custom-select">
+                        <option selected>default</option>
+                        <option>3024-day</option>
+                        <option>3024-night</option>
+                        <option>abcdef</option>
+                        <option>ambiance</option>
+                        <option>ayu-dark</option>
+                        <option>ayu-mirage</option>
+                        <option>base16-dark</option>
+                        <option>base16-light</option>
+                        <option>bespin</option>
+                        <option>blackboard</option>
+                        <option>cobalt</option>
+                        <option>colorforth</option>
+                        <option>darcula</option>
+                        <option>dracula</option>
+                        <option>duotone-dark</option>
+                        <option>duotone-light</option>
+                        <option>eclipse</option>
+                        <option>elegant</option>
+                        <option>erlang-dark</option>
+                        <option>gruvbox-dark</option>
+                        <option>hopscotch</option>
+                        <option>icecoder</option>
+                        <option>idea</option>
+                        <option>isotope</option>
+                        <option>lesser-dark</option>
+                        <option>liquibyte</option>
+                        <option>lucario</option>
+                        <option>material</option>
+                        <option>material-darker</option>
+                        <option>material-palenight</option>
+                        <option>material-ocean</option>
+                        <option>mbo</option>
+                        <option>mdn-like</option>
+                        <option>midnight</option>
+                        <option>monokai</option>
+                        <option>moxer</option>
+                        <option>neat</option>
+                        <option>neo</option>
+                        <option>night</option>
+                        <option>nord</option>
+                        <option>oceanic-next</option>
+                        <option>panda-syntax</option>
+                        <option>paraiso-dark</option>
+                        <option>paraiso-light</option>
+                        <option>pastel-on-dark</option>
+                        <option>railscasts</option>
+                        <option>rubyblue</option>
+                        <option>seti</option>
+                        <option>shadowfox</option>
+                        <option>solarized dark</option>
+                        <option>solarized light</option>
+                        <option>the-matrix</option>
+                        <option>tomorrow-night-bright</option>
+                        <option>tomorrow-night-eighties</option>
+                        <option>ttcn</option>
+                        <option>twilight</option>
+                        <option>vibrant-ink</option>
+                        <option>xq-dark</option>
+                        <option>xq-light</option>
+                        <option>yeti</option>
+                        <option>yonce</option>
+                        <option>zenburn</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lang">Язык программирования</label>
+                    <select id="lang" class="custom-select">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="username">Ваше имя</label>
+                    <input type="text" id="username" class="form-control">
+                </div>
+                <div class="">
+                    Users
+                    <ul id="users"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const KEY = '{{ key }}';
+    const LANGUAGE = '{{ page.language }}';
+    let users = {};
+</script>
+
+<script src="/static/jquery-3.2.1.slim.min.js"></script>
+<script src="/static/popper.min.js"></script>
+<script src="/static/bootstrap.min.js"></script>
+<script src="/static/lib/codemirror.js"></script>
+<script src="/static/mode/meta.js"></script>
+<script src="/static/addon/mode/loadmode.js"></script>
+<script src="/static/main.js"></script>
+</body>
+</html>

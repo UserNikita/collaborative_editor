@@ -1,0 +1,373 @@
+Структура папок
+Серийный номер тома: 7833-B463
+C:.
+|   meta.js
+|   mode.txt
+|   
++---apl
+|       apl.js
+|       
++---asciiarmor
+|       asciiarmor.js
+|       
++---asn.1
+|       asn.1.js
+|       
++---asterisk
+|       asterisk.js
+|       
++---brainfuck
+|       brainfuck.js
+|       
++---clike
+|       clike.js
+|       
++---clojure
+|       clojure.js
+|       
++---cmake
+|       cmake.js
+|       
++---cobol
+|       cobol.js
+|       
++---coffeescript
+|       coffeescript.js
+|       
++---commonlisp
+|       commonlisp.js
+|       
++---crystal
+|       crystal.js
+|       
++---css
+|       css.js
+|       gss_test.js
+|       less_test.js
+|       scss_test.js
+|       
++---cypher
+|       cypher.js
+|       
++---d
+|       d.js
+|       
++---dart
+|       dart.js
+|       
++---diff
+|       diff.js
+|       
++---django
+|       django.js
+|       
++---dockerfile
+|       dockerfile.js
+|       
++---dtd
+|       dtd.js
+|       
++---dylan
+|       dylan.js
+|       
++---ebnf
+|       ebnf.js
+|       
++---ecl
+|       ecl.js
+|       
++---eiffel
+|       eiffel.js
+|       
++---elm
+|       elm.js
+|       
++---erlang
+|       erlang.js
+|       
++---factor
+|       factor.js
+|       
++---fcl
+|       fcl.js
+|       
++---forth
+|       forth.js
+|       
++---fortran
+|       fortran.js
+|       
++---gas
+|       gas.js
+|       
++---gfm
+|       gfm.js
+|       
++---gherkin
+|       gherkin.js
+|       
++---go
+|       go.js
+|       
++---groovy
+|       groovy.js
+|       
++---haml
+|       haml.js
+|       
++---handlebars
+|       handlebars.js
+|       
++---haskell
+|       haskell.js
+|       
++---haskell-literate
+|       haskell-literate.js
+|       
++---haxe
+|       haxe.js
+|       
++---htmlembedded
+|       htmlembedded.js
+|       
++---htmlmixed
+|       htmlmixed.js
+|       
++---http
+|       http.js
+|       
++---idl
+|       idl.js
+|       
++---javascript
+|       javascript.js
+|       
++---jinja2
+|       jinja2.js
+|       
++---jsx
+|       jsx.js
+|       
++---julia
+|       julia.js
+|       
++---livescript
+|       livescript.js
+|       
++---lua
+|       lua.js
+|       
++---markdown
+|       markdown.js
+|       
++---mathematica
+|       mathematica.js
+|       
++---mbox
+|       mbox.js
+|       
++---mirc
+|       mirc.js
+|       
++---mllike
+|       mllike.js
+|       
++---modelica
+|       modelica.js
+|       
++---mscgen
+|       mscgen.js
+|       mscgen_test.js
+|       msgenny_test.js
+|       xu_test.js
+|       
++---mumps
+|       mumps.js
+|       
++---nginx
+|       nginx.js
+|       
++---nsis
+|       nsis.js
+|       
++---ntriples
+|       ntriples.js
+|       
++---octave
+|       octave.js
+|       
++---oz
+|       oz.js
+|       
++---pascal
+|       pascal.js
+|       
++---pegjs
+|       pegjs.js
+|       
++---perl
+|       perl.js
+|       
++---php
+|       php.js
+|       
++---pig
+|       pig.js
+|       
++---powershell
+|       powershell.js
+|       
++---properties
+|       properties.js
+|       
++---protobuf
+|       protobuf.js
+|       
++---pug
+|       pug.js
+|       
++---puppet
+|       puppet.js
+|       
++---python
+|       python.js
+|       
++---q
+|       q.js
+|       
++---r
+|       r.js
+|       
++---rpm
+|   |   rpm.js
+|   |   
+|   \---changes
++---rst
+|       rst.js
+|       
++---ruby
+|       ruby.js
+|       
++---rust
+|       rust.js
+|       
++---sas
+|       sas.js
+|       
++---sass
+|       sass.js
+|       
++---scheme
+|       scheme.js
+|       
++---shell
+|       shell.js
+|       
++---sieve
+|       sieve.js
+|       
++---slim
+|       slim.js
+|       
++---smalltalk
+|       smalltalk.js
+|       
++---smarty
+|       smarty.js
+|       
++---solr
+|       solr.js
+|       
++---soy
+|       soy.js
+|       
++---sparql
+|       sparql.js
+|       
++---spreadsheet
+|       spreadsheet.js
+|       
++---sql
+|       sql.js
+|       
++---stex
+|       stex.js
+|       
++---stylus
+|       stylus.js
+|       
++---swift
+|       swift.js
+|       
++---tcl
+|       tcl.js
+|       
++---textile
+|       textile.js
+|       
++---tiddlywiki
+|       tiddlywiki.css
+|       tiddlywiki.js
+|       
++---tiki
+|       tiki.css
+|       tiki.js
+|       
++---toml
+|       toml.js
+|       
++---tornado
+|       tornado.js
+|       
++---troff
+|       troff.js
+|       
++---ttcn
+|       ttcn.js
+|       
++---ttcn-cfg
+|       ttcn-cfg.js
+|       
++---turtle
+|       turtle.js
+|       
++---twig
+|       twig.js
+|       
++---vb
+|       vb.js
+|       
++---vbscript
+|       vbscript.js
+|       
++---velocity
+|       velocity.js
+|       
++---verilog
+|       verilog.js
+|       
++---vhdl
+|       vhdl.js
+|       
++---vue
+|       vue.js
+|       
++---wast
+|       wast.js
+|       
++---webidl
+|       webidl.js
+|       
++---xml
+|       xml.js
+|       
++---xquery
+|       xquery.js
+|       
++---yacas/yacas.js
+|       
++---yaml/yaml.js
++---yaml-frontmatter/yaml-frontmatter.js
+|
+\---z80/z80.js
+        

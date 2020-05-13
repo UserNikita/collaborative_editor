@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis:6
+    container_name: redis
+  db:
+    image: postgres:12
+    container_name: db
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=postgres
+  web:
+    container_name: web
+    build:
+      context: .
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+      - POSTGRES_DATABASE=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - ./app:/app
+    depends_on:
+      - db
+      - redis

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Collaborative editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/lib/codemirror.css">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-primary">
+    <a href="/" class="navbar-brand mb-0 h1">Collaborative Editor</a>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card ml-2 mt-2">
+                <div class="card-body p-0">
+                    <div class="row justify-content-between p-3">
+                        <div class="col col-lg-3">
+                            <h3>Collaborative Editor</h3>
+                            <p>
+                                Это онлайн редактор кода. Скорее создайте новый документ и пригласите друзей,
+                                чтобы редактировать его совместно.
+                            </p>
+
+                            <h3>Преимущества</h3>
+                            <ul>
+                                <li>Ваши друзья видят изменения кода в режиме реального времени</li>
+                                <li>Ничего не нужно устанавливать, хватит обычного браузера</li>
+                                <li>Код сохранится, продолжить редактирование можно перейдя потой же ссылке</li>
+                            </ul>
+
+                            <a href="/generate" type="button" class="btn btn-primary btn-lg btn-block">
+                                Создать новый документ
+                            </a>
+                        </div>
+                        <div class="col col-lg-4">
+                            <h3 class="text-center">Статистика</h3>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Язык программирования</th>
+                                    <th scope="col">Количество</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for item in stats %}
+                                    <tr>
+                                        <td>{{ item.lang }}</td>
+                                        <td>{{ item.count }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/jquery-3.2.1.slim.min.js"></script>
+    <script src="/static/popper.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
